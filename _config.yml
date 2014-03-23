@@ -1,3 +1,13 @@
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
+exclude:
+- '.gitignore'
+- '.sass-cache'
+- 'config.rb'
+- 'Gemfile'
+- 'Gemfile.lock'
+- 'Guardfile'
+- 'Procfile'
+- 'README.md'
+- 'sass'
