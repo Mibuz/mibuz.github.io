@@ -1,5 +1,7 @@
-name: Your New Jekyll Site
+name: Mibuz
 markdown: redcarpet
+assets_css: assets/stylesheets/style.css
+assets_js: assets/stylesheets/main.js
 pygments: true
 exclude:
 - '.gitignore'
