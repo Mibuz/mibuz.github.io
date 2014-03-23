@@ -1,0 +1,6 @@
+.group-box{
+  @include span-columns(12);
+  .box{
+    @include span-columns(4 of 12);
+  }
+}
