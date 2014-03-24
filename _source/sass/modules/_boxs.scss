@@ -2,5 +2,9 @@
   @include span-columns(12);
   .box{
     @include span-columns(4 of 12);
+    color: #d47066;
+    h2{
+      margin-bottom: 10px;
+    }
   }
 }
