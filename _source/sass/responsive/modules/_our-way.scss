@@ -1,0 +1,10 @@
+@include media($mobile) {
+  #our-way{
+    .header-way{
+      hgroup{
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
+}

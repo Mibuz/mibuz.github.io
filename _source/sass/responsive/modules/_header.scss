@@ -1,0 +1,9 @@
+@include media($mobile) {
+  #header{
+    height: 395px;
+
+    hgroup{
+      margin-top: 80px;
+    }
+  }
+}
