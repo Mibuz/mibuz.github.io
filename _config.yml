@@ -6,6 +6,7 @@ pygments: true
 exclude:
 - '.gitignore'
 - '.sass-cache'
+- 'CNAME'
 - 'config.rb'
 - 'Gemfile'
 - 'Gemfile.lock'
