@@ -1,9 +1,37 @@
 @include media($mobile) {
-  #header{
-    height: 395px;
+  #header-hero{
+    background-size: inherit;
+    background-position: 50% 0px;
 
-    hgroup{
+    .text-highlight{
+      width: 100%;
+      text-align: center;
       margin-top: 80px;
+      h1{
+        letter-spacing: -3px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include media($mobile_small) {
+  #header-hero{
+    background-size: inherit;
+    background-position: -745px 0px;
+
+    .text-highlight{
+      margin-top: 100px;
+      h1{
+        font-size: em(35);
+        letter-spacing: -3px;
+        line-height: 35px;
+        margin-bottom: 10px;
+      }
+
+      h2{
+        font-size: em(18);
+      }
     }
   }
 }
