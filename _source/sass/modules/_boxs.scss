@@ -1,10 +1,22 @@
-.group-box{
+.boxs{
   @include span-columns(12);
+  margin-top: 70px;
   .box{
     @include span-columns(4 of 12);
-    color: #d47066;
+    text-align: center;
+
+    img{
+      margin-bottom: 30px;
+    }
+
     h2{
-      margin-bottom: 10px;
+      font-size: em(22);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    p{
+      font-size: em(18);
     }
   }
 }
