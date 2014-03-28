@@ -8,24 +8,22 @@
 
 // Core
 @import "core/main";
+@import "core/reset";
+@import "core/form";
 
 // Modules
 @import "modules/header";
-@import "modules/contact";
-@import "modules/about";
+@import "modules/specialists";
 @import "modules/boxs";
-@import "modules/our-way";
+@import "modules/blocks";
+@import "modules/contact";
 @import "modules/footer";
 
-// Reponsive
-// ==========================
-
-// Core
+// Responsive
 @import "responsive/core/main";
 
-// Modules
 @import "responsive/modules/header";
-@import "responsive/modules/contact";
-@import "responsive/modules/about";
+@import "responsive/modules/specialists";
 @import "responsive/modules/boxs";
-@import "responsive/modules/our-way";
+@import "responsive/modules/blocks";
+@import "responsive/modules/contact";
