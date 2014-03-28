@@ -3,3 +3,14 @@
 .inner{
   @include outer-container();
 }
+
+#{$headings}{
+  font-family: $font-main;
+  font-weight: 700;
+}
+
+.text-highlight{
+  #{$headings}{
+    text-transform: uppercase;
+  }
+}
