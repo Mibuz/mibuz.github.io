@@ -1,0 +1,28 @@
+#specialists{
+  background-color: $secon-color;
+  color: #fff;
+  padding: 20px 0;
+
+  .text-highlight{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    font-size: 15px;
+    margin-top: 5px;
+
+    h2{
+      font-size: em(20);
+      font-weight: 300;
+    }
+
+    h3{
+      font-size: em(15);
+      color: $main-color;
+      opacity: 0.75;
+    }
+    img{
+      margin-top: 20px;
+      width: 200px;
+    }
+  }
+}
