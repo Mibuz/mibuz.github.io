@@ -3,37 +3,57 @@ layout: default
 title: Lorem ipsum dolor sit.
 ---
 
-<div id="content">
-  <section id="about" class="block">
-    <div class="inner">
-      <hgroup>
-        <h2>Quem somos</h2>
-        <h3>"Quote lorem ipsum dolor sit amet, consectetur."</h3>
-      </hgroup>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dolor hic eum beatae nam impedit officiis maxime quae distinctio exercitationem molestiae maiores magni totam voluptatum obcaecati doloremque ullam. Cum, quae id cupiditate sed dolorum aliquid nobis commodi illo assumenda quas repellat corrupti alias aperiam odio voluptate deleniti iure vero quasi.</p>
+<section id="services" class="block">
+  <div class="inner">
+    <div class="text-highlight">
+      <h1>O que fazemos</h1>
+      <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
     </div>
-  </section>
+    {% include services.html %}
 
-  <section id="our-way">
-    <header class="header-way">
-      <div class="inner">
-        <hgroup>
-          <h2>Veja como fazemos...</h2>
-          <h3>Lorem ipsum dolor sit.</h3>
-        </hgroup>
-      </div>
-    </header>
+  </div>
+</section>
+
+<section id="mibuz-middle">
+  <div class="inner">
+    <div class="text-highlight">
+      <h1>Amamos o que fazemos :)</h1>
+    </div>
+  </div>
+</section>
+
+<section id="our-way" class="block">
+  <div class="inner">
+    <div class="text-highlight">
+      <h1>Como fazemos</h1>
+      <h2>Nós usamos <a target="_blank" href="http://desenvolvimentoagil.com.br/xp/praticas/">XP</a>. Nosso negócio é entregar valor em iterações semanais.</h2>
+    </div>
+
+    {% include our-way.html %}
+  </div>
+</section>
+
+<section id="about" class="block">
+  <div class="inner">
+    <div class="text-highlight">
+      <h1>Quem somos</h1>
+      <h2>Somos especialistas em desenvolvimento de software.</h2>
+    </div>
+
     <div class="content">
-      <div class="inner">
-        {% include our-way.html %}
-      </div>
+      <p>Gostamos de criar produtos para web e para dispositivos móveis. Adotamos as melhores práticas do mercado no desenvolvimento de produtos.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact-us">
-    <div class="inner">
-      {% include contact.html %}
+<section id="contact" class="block">
+  <div class="inner">
+
+    <div class="text-highlight">
+      <h1>Tem algum projeto?</h1>
+      <h2>Teremos o prazer em ouvir :)</h2>
     </div>
-  </section>
-</div>
+
+    {% include contact.html %}
+  </div>
+</section>

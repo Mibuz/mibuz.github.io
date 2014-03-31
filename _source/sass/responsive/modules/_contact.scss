@@ -1,7 +1,12 @@
 @include media($mobile) {
-  #contact-us{
-    .inner{
-      width: 95%;
+  #contact{
+    #form_contact{
+      @include span-columns(4);
+      @include shift(0);
+
+      #Field1, #Field2, #Field4, #Field5{
+        @include span-columns(4 of 4);
+      }
     }
   }
 }

@@ -1,11 +1,14 @@
 @include media($mobile) {
-  .group-box{
+  .boxs{
     @include span-columns(4);
-
+    margin-top: 20px;
     .box{
       @include span-columns(4 of 4);
-      text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }
