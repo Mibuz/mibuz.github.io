@@ -1,5 +1,5 @@
 @include media($mobile) {
-  .boxs{
+  .boxes{
     @include span-columns(4);
     margin-top: 20px;
     .box{
