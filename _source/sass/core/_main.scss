@@ -15,7 +15,7 @@
   }
 }
 
-#mibuz-middle{
+#we-love{
   @include box-sizing(border-box);
   padding: 80px 0;
   background-image: url("../images/mibuz-middle.jpg");
@@ -24,6 +24,6 @@
 
   h1{
     font-size: em(26);
-    color: $secon-color;
+    color: $secondary-color;
   }
 }
