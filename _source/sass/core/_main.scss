@@ -9,9 +9,23 @@
   font-weight: 700;
 }
 
+
 .text-highlight{
   #{$headings}{
     text-transform: uppercase;
+  }
+  h2{
+    strong{
+      color: darken($main-color, 20%);
+    }
+  }
+
+  h4{
+    color: #777;
+    font-size: em(18);
+    text-align: center;
+    margin: 1em 0;
+    strong { color: #333; }
   }
 }
 
@@ -26,4 +40,8 @@
     font-size: em(26);
     color: $secondary-color;
   }
+}
+
+.call-to-action{
+  @extend %button;
 }
