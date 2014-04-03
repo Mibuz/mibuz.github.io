@@ -18,7 +18,7 @@
 
   $('.scroll-to').on('click', function(e) {
     e.preventDefault();
-    return smoothScroll($(window), $($(e.currentTarget).attr('href')).offset().top, 500);
+    return smoothScroll($(window), $($(this).attr('href')).offset().top, 500);
   });
 
 }).call(this);

@@ -11,4 +11,4 @@ smoothScroll = (el, to, duration) ->
 
 $('.scroll-to').on 'click', (e) ->
   e.preventDefault()
-  smoothScroll $(window), $($(e.currentTarget).attr('href')).offset().top, 500
+  smoothScroll $(window), $($(@).attr('href')).offset().top, 500
