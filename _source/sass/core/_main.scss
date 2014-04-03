@@ -41,17 +41,3 @@
     color: $secondary-color;
   }
 }
-
-.call-to-action{
-  @extend %basic-button;
-  min-width: 200px;
-  margin: 20px auto 0 auto;
-  background: $main-color;
-  color: #fff;
-  font-size: em(22);
-
-  &:hover{
-    color: #fff;
-    background: darken($main-color,8%);
-  }
-}

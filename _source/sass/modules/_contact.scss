@@ -55,19 +55,5 @@
       @include span-columns(9 of 9);
       margin-right: 0;
     }
-
-    input[type="submit"]{
-      @extend %basic-button;
-      min-width: 200px;
-      margin: 20px auto 0 auto;
-      background: $main-color;
-      color: #fff;
-      font-size: em(22);
-
-      &:hover{
-        color: #fff;
-        background: darken($main-color,8%);
-      }
-    }
   }
 }
