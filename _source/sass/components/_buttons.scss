@@ -6,10 +6,12 @@
   margin: 20px auto 0 auto;
   min-width: 200px;
   padding: 1em;
+  font-weight: 300;
 
   &:hover{
     color: #fff;
-    background: darken($main-color,8%);
+    background: darken($main-color,8%) !important;
+    box-shadow: none !important;
   }
 }
 
