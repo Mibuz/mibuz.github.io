@@ -8,6 +8,13 @@
   padding: 1em;
   font-weight: 300;
 
+  &:active, &:focus{
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    
+  }
+
   &:hover{
     color: #fff;
     background: darken($main-color,8%) !important;
