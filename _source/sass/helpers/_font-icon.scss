@@ -1,0 +1,21 @@
+@mixin font-icon($icon: false, $position: 'before', $styles: true) {
+  &:#{$position} {
+    @if $icon {
+      content: match($icons, $icon);
+    }
+    @if $styles {
+      speak: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-transform: none;
+      line-height: 1;
+      font: {
+        style: normal;
+        variant: normal;
+        weight: normal;
+        family: 'icon';
+      }
+    }
+    @content;
+  }
+}
