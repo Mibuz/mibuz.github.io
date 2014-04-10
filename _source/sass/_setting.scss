@@ -6,6 +6,13 @@ $secondary-color: #3d3737;
 $font-main: 'Montserrat', sans-serif;
 $headings: "h1,h2,h3,h4,h5,h6";
 
+$icons: (
+  'github' '\e800',
+  'facebook' '\e802',
+  'skype' '\e803',
+  'twitter' '\e801'
+);
+
 // Grid
 $mobile: new-breakpoint(max-width em(959) 4);
 $mobile_small: new-breakpoint(max-width em(600) 4);
