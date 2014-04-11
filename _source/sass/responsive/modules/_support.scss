@@ -1,0 +1,10 @@
+@include media($mobile) {
+  #support{
+    input#name{
+      width: 100%;
+    }
+    input#signin{
+      width: 100%;
+    }
+  }
+}

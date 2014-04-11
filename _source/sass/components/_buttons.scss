@@ -1,4 +1,4 @@
-.call-to-action, input[type="submit"]{
+.call-to-action{
   @extend %basic-button;
   background: $main-color;
   color: #fff;
@@ -7,19 +7,11 @@
   min-width: 200px;
   padding: 1em;
   font-weight: 300;
+}
 
-  &:active, &:focus{
-    border: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    
-  }
-
-  &:hover{
-    color: #fff;
-    background: darken($main-color,8%) !important;
-    box-shadow: none !important;
-  }
+input[type="submit"]{
+  @extend %basic-button;
+  background: $main-color;
 }
 
 .call-to-action{
