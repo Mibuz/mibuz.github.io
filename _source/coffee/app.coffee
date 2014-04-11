@@ -13,8 +13,20 @@ class App
         @smoothScroll el, to, duration - @mover
     ).bind(this), @mover)
 
-mibuz = new App()
+  ParallaxScroll : ->
+    $('[data-parallax-speed]').each ->
+      $obj = $(@);
+
+      $(window).scroll ->
+        yPos = ($(window).scrollTop() / $obj.data('parallax-speed'))
+
+        bgpos = "50% #{ yPos }px"
+
+        $obj.css('background-position', bgpos )
+
+app = new App()
+app.ParallaxScroll()
 
 $('.scroll-to').on 'click', (e) ->
   e.preventDefault()
-  mibuz.smoothScroll $(window), $($(@).attr('href')).offset().top
+  app.smoothScroll $(window), $($(@).attr('href')).offset().top

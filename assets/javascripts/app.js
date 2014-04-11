@@ -1,5 +1,5 @@
 (function() {
-  var App, mibuz;
+  var App, app;
 
   App = (function() {
     function App() {}
@@ -18,15 +18,30 @@
       }).bind(this), this.mover);
     };
 
+    App.prototype.ParallaxScroll = function() {
+      return $('[data-parallax-speed]').each(function() {
+        var $obj;
+        $obj = $(this);
+        return $(window).scroll(function() {
+          var bgpos, yPos;
+          yPos = $(window).scrollTop() / $obj.data('parallax-speed');
+          bgpos = "50% " + yPos + "px";
+          return $obj.css('background-position', bgpos);
+        });
+      });
+    };
+
     return App;
 
   })();
 
-  mibuz = new App();
+  app = new App();
+
+  app.ParallaxScroll();
 
   $('.scroll-to').on('click', function(e) {
     e.preventDefault();
-    return mibuz.smoothScroll($(window), $($(this).attr('href')).offset().top);
+    return app.smoothScroll($(window), $($(this).attr('href')).offset().top);
   });
 
 }).call(this);
