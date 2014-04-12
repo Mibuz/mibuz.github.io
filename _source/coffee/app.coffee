@@ -2,15 +2,15 @@ class App
 
   isMobile:
     Android: ->
-        navigator.userAgent.match(/Android/i);
+        navigator.userAgent.match(/Android/i)
     BlackBerry: ->
-        navigator.userAgent.match(/BlackBerry/i);
+        navigator.userAgent.match(/BlackBerry/i)
     iOS: ->
-        navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        navigator.userAgent.match(/iPhone|iPad|iPod/i)
     Opera: ->
-        navigator.userAgent.match(/Opera Mini/i);
+        navigator.userAgent.match(/Opera Mini/i)
     Windows: ->
-        navigator.userAgent.match(/IEMobile/i);
+        navigator.userAgent.match(/IEMobile/i)
     any: ->
         @Android() || @BlackBerry() || @iOS() || @Opera() || @Windows()
 
