@@ -1,5 +1,19 @@
 class App
 
+  isMobile:
+    Android: ->
+        navigator.userAgent.match(/Android/i);
+    BlackBerry: ->
+        navigator.userAgent.match(/BlackBerry/i);
+    iOS: ->
+        navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    Opera: ->
+        navigator.userAgent.match(/Opera Mini/i);
+    Windows: ->
+        navigator.userAgent.match(/IEMobile/i);
+    any: ->
+        @Android() || @BlackBerry() || @iOS() || @Opera() || @Windows()
+
   smoothScroll: (el, to, duration) ->
     @mover = 10
     duration = if duration < 0 || typeof duration != 'undefined' then duration else 800
@@ -14,15 +28,16 @@ class App
     ).bind(this), @mover)
 
   ParallaxScroll : ->
-    $('[data-parallax-speed]').each ->
-      $obj = $(@);
+    if !app.isMobile.any()
+      $('[data-parallax-speed]').each ->
+        $obj = $(@);
 
-      $(window).scroll ->
-        yPos = ($(window).scrollTop() / $obj.data('parallax-speed'))
+        $(window).scroll ->
+          yPos = ($(window).scrollTop() / $obj.data('parallax-speed'))
 
-        bgpos = "50% #{ yPos }px"
+          bgpos = "50% #{ yPos }px"
 
-        $obj.css('background-position', bgpos )
+          $obj.css('background-position', bgpos )
 
 app = new App()
 app.ParallaxScroll()

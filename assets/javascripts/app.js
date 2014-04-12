@@ -4,6 +4,27 @@
   App = (function() {
     function App() {}
 
+    App.prototype.isMobile = {
+      Android: function() {
+        return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function() {
+        return this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows();
+      }
+    };
+
     App.prototype.smoothScroll = function(el, to, duration) {
       var difference, perTick;
       this.mover = 10;
@@ -19,16 +40,18 @@
     };
 
     App.prototype.ParallaxScroll = function() {
-      return $('[data-parallax-speed]').each(function() {
-        var $obj;
-        $obj = $(this);
-        return $(window).scroll(function() {
-          var bgpos, yPos;
-          yPos = $(window).scrollTop() / $obj.data('parallax-speed');
-          bgpos = "50% " + yPos + "px";
-          return $obj.css('background-position', bgpos);
+      if (!app.isMobile.any()) {
+        return $('[data-parallax-speed]').each(function() {
+          var $obj;
+          $obj = $(this);
+          return $(window).scroll(function() {
+            var bgpos, yPos;
+            yPos = $(window).scrollTop() / $obj.data('parallax-speed');
+            bgpos = "50% " + yPos + "px";
+            return $obj.css('background-position', bgpos);
+          });
         });
-      });
+      }
     };
 
     return App;
