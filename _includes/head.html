@@ -1,5 +1,6 @@
 <head>
   <meta charset="utf-8">
+  {% include kissmetrics.html %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{site.name}} {% if page.title %} - {{ page.title }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -9,4 +10,5 @@
   <meta name="keywords" content="{{ page.keywords }}" />
 
   <link rel="stylesheet" type="text/css" href="{{ site.assets_css }}">
+  {% include analytics.html %}
 </head>
