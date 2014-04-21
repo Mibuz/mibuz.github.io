@@ -16,6 +16,23 @@
       display: none;
     }
 
+    p{
+      margin: 0;
+      padding: 20px 0 0 0;
+      position: relative;
+      float: left;
+      width: 100%;
+
+      &.medium{
+        @include span-columns(3 of 9);
+
+        &.last{
+          margin-right: 0;
+        }
+      }
+    }
+
+
     #{$all-text-inputs}, textarea {
       border: {
         left: none;
@@ -38,22 +55,27 @@
       box-shadow: inset 0 1px 3px rgba($main-color, 0.06),0 0 5px rgba($main-color, 0.7);
     }
 
-    #Field1{
-      @include span-columns(3 of 9);
+    // Validation
+    .unhappy{
+      border: {
+        left: 1px solid $red !important;
+        right: 1px solid $red !important;
+        top: 1px solid $red !important;
+        bottom: 3px solid $red !important;
+      };
+      margin-top: 2px;
+
+      @include placeholder {
+        color: $red  
+      }
     }
 
-    #Field2{
-      @include span-columns(3 of 9);
-    }
-
-    #Field4{
-      @include span-columns(3 of 9);
-      margin-right: 0;
-    }
-
-    #Field5{
-      @include span-columns(9 of 9);
-      margin-right: 0;
+    .unhappyMessage{
+      position: absolute;
+      display: block;
+      top: 0;
+      font-size: em(12);
+      color: $red
     }
   }
 }

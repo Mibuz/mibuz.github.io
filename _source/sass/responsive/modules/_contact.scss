@@ -4,8 +4,15 @@
       @include span-columns(4);
       @include shift(0);
 
-      #Field1, #Field2, #Field4, #Field5{
-        @include span-columns(4 of 4);
+      p{
+        padding-top: 11px;
+        &.medium{
+          @include span-columns(4 of 4);
+        }
+      }
+
+      .unhappyMessage{
+        top: -8px;
       }
     }
   }
