@@ -90,4 +90,6 @@
     }
   });
 
+  $("#Field2").autoEmail(['gmail.com', 'yahoo.com', 'google.com', 'hotmail.com', 'me.com', 'aol.com', 'live.com', 'googlemail.com', 'msn.com', 'facebook.com', 'mail.com', 'outlook.com', 'icloud.com'], false);
+
 }).call(this);

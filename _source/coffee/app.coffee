@@ -67,3 +67,5 @@ $('#form_contact').isHappy(
         message: 'Mensagem muito curta, nos explique melhor o seu projeto.'
         minlength: 3
 )
+
+$("#Field2").autoEmail(['gmail.com', 'yahoo.com', 'google.com', 'hotmail.com', 'me.com', 'aol.com', 'live.com', 'googlemail.com', 'msn.com', 'facebook.com', 'mail.com', 'outlook.com', 'icloud.com'], false)
