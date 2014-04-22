@@ -6,7 +6,7 @@
   background-position: center top;
   background-size: cover;
   position: relative;
-  ttom: 0;
+  margin-bottom: 0;
 
   form{
     @include span-columns(9);
