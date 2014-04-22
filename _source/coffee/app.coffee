@@ -1,18 +1,7 @@
 class App
 
-  isMobile:
-    Android: ->
-        navigator.userAgent.match(/Android/i)
-    BlackBerry: ->
-        navigator.userAgent.match(/BlackBerry/i)
-    iOS: ->
-        navigator.userAgent.match(/iPhone|iPad|iPod/i)
-    Opera: ->
-        navigator.userAgent.match(/Opera Mini/i)
-    Windows: ->
-        navigator.userAgent.match(/IEMobile/i)
-    any: ->
-        @Android() || @BlackBerry() || @iOS() || @Opera() || @Windows()
+  isMobile: ->
+    navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)
 
   smoothScroll: (el, to, duration) ->
     @mover = 10
@@ -28,7 +17,7 @@ class App
     ).bind(this), @mover)
 
   ParallaxScroll : ->
-    if !app.isMobile.any()
+    if !app.isMobile()
       $('[data-parallax-speed]').each ->
         $obj = $(@);
 

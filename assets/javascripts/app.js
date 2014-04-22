@@ -4,25 +4,8 @@
   App = (function() {
     function App() {}
 
-    App.prototype.isMobile = {
-      Android: function() {
-        return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function() {
-        return this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows();
-      }
+    App.prototype.isMobile = function() {
+      return navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
     };
 
     App.prototype.smoothScroll = function(el, to, duration) {
@@ -40,7 +23,7 @@
     };
 
     App.prototype.ParallaxScroll = function() {
-      if (!app.isMobile.any()) {
+      if (!app.isMobile()) {
         return $('[data-parallax-speed]').each(function() {
           var $obj;
           $obj = $(this);
