@@ -5,14 +5,24 @@
       @include shift(0);
 
       p{
-        padding-top: 11px;
+        padding-top: 0px;
+        line-height: 12px;
+        margin-bottom: em(12);
         &.medium{
           @include span-columns(4 of 4);
         }
       }
+      .unhappy{
+        margin-top: 4px;
+        margin-bottom: 0 !important;
+      }
 
       .unhappyMessage{
-        top: -8px;
+        position: relative;
+        top: auto;
+        color: #fff;
+        background: $red;
+        padding: 10px;
       }
     }
   }
