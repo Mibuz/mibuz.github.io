@@ -1,5 +1,7 @@
-#specialists{
-  .text-highlight{
-    width: 100%;
+@media #{$small-only} {
+  #specialists{
+    .text-highlight{
+      width: 100%;
+    }
   }
 }

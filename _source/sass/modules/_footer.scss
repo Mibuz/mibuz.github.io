@@ -1,19 +1,24 @@
-#footer{
+#footer {
   @include box-sizing(border-box);
   padding: 60px 0;
   background-color: $secondary-color;
   font-size: .9em;
-  .boxes{
+  .boxes {
     margin-top: 0;
-    .box{
-      @include span-columns(12 of 12);
+    .box {
+      @extend .large-12;
+      @extend .columns;
     }
   }
-  .vcard{
+  .vcard {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
     color: #fff;
     text-align: center;
 
-    p{
+    p {
       margin: 0;
       padding: 0;
       opacity: 0.5;

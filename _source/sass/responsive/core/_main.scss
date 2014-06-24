@@ -1,4 +1,4 @@
-@include media($mobile) {
+@media #{$small-only} {
   .inner{
     padding: 0 20px;
   }

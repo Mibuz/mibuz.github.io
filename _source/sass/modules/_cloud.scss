@@ -1,26 +1,30 @@
-#cloud{
+#cloud {
   background-color: $secondary-color;
   color: #fff;
   padding: 20px 0;
 
-  .text-highlight{
+  .text-highlight {
     margin: 0 auto;
     text-align: center;
     width: 50%;
     font-size: 15px;
     margin-top: 5px;
 
-    h2{
-      font-size: em(20);
+    h2 {
+      color: #fff;
+      font-size: rem-calc(22);
+      line-height: rem-calc(22);
       font-weight: 300;
+      margin-bottom: 0;
     }
 
-    h3{
-      font-size: em(15);
+    h3 {
+      font-size: rem-calc(15);
+      line-height: rem-calc(15);
       color: $main-color;
       opacity: 0.75;
     }
-    img{
+    img {
       margin-top: 20px;
       width: 200px;
     }

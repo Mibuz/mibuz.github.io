@@ -1,45 +1,41 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-@include font-face(icon, 'font/fontello');
-
-.inner{
-  @include outer-container();
+.inner {
+  @extend .row;
 }
 
-#{$headings}{
+#{$headings} {
   font-family: $font-main;
   font-weight: 700;
 }
 
 
-.text-highlight{
-  #{$headings}{
+.text-highlight {
+  #{$headings} {
     text-transform: uppercase;
   }
-  h2{
-    strong{
+  h2 {
+    strong {
       color: darken($main-color, 20%);
     }
   }
 
-  h4{
+  h4 {
     color: #777;
-    font-size: em(18);
+    font-size: rem-calc(18);
     text-align: center;
     margin: 1em 0;
     strong { color: #333; }
   }
 }
 
-#we-love{
+#we-love {
   @include box-sizing(border-box);
   padding: 80px 0;
   background-image: url("../images/mibuz-middle.jpg");
   background-size: cover;
   text-align: center;
 
-  h1{
-    font-size: em(26);
+  h1 {
+    font-size: rem-calc(26);
     color: $secondary-color;
   }
 }

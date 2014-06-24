@@ -2,7 +2,7 @@
   @extend %basic-button;
   background: $main-color;
   color: #fff;
-  font-size: em(22);
+  font-size: rem-calc(22);
   margin: 20px auto 0 auto;
   min-width: 200px;
   padding: 1em;
@@ -10,8 +10,15 @@
 }
 
 input[type="submit"]{
-  @extend %basic-button;
+  @extend .button;
   background: $main-color;
+  border: none;
+  border-radius: 2px;
+  font-weight: 400;
+
+  &:hover, &:focus {
+    background-color: darken($main-color, 8%);
+  }
 }
 
 .call-to-action{

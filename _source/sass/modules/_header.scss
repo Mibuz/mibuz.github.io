@@ -1,5 +1,6 @@
-#header-hero{
+#header-hero {
   @include box-sizing(border-box);
+  @include clearfix;
   background: url('../images/background-header.jpg');
   min-height: 130px;
   background-repeat: no-repeat;
@@ -8,7 +9,7 @@
   background-size: cover;
   position: relative;
 
-  &:before{
+  &:before {
     @include background(radial-gradient(circle at 44% 37%, rgba(#000, 0), rgba(#000, 0.6)));
     content: '';
     display: block;
@@ -18,17 +19,17 @@
     z-index: 0;
   }
 
-  .inner{
+  .inner {
     position: relative;
     z-index: 1;
   }
 
-  #navigation{
+  #navigation {
     position: absolute;
     top: 45px;
     width: 100%;
 
-    .logo{
+    .logo {
       display: block;
       float: left;
       img{
@@ -36,13 +37,13 @@
       }
     }
 
-    ul{
+    ul {
       float: right;
-      li{
+      li {
         display: inline-block;
         margin-right: 15px;
 
-        a{
+        a {
           @include box-sizing(border-box);
           @include transition (background 0.2s ease-in-out);
           font-family: $font-main;
@@ -51,7 +52,7 @@
           padding: 4px 8px;
           border: none;
 
-          &:hover{
+          &:hover {
             padding: {
               left: 6px;
               right: 6px;
@@ -61,30 +62,34 @@
           }
         }
 
-        &:last-child{
+        &:last-child {
           margin-right: 0;
         }
       }
     }
   }
 
-  .text-highlight{
-    float: left;
-    width: 60%;
-    margin-top: 160px;
-    margin-bottom: 85px;
+  .hero-text {
+    .text-highlight {
+      @extend .small-12;
+      @extend .medium-12;
+      @extend .large-8;
+      @extend .columns;
+      margin-top: 160px;
+      margin-bottom: 85px;
 
-    h1{
-      color: #fff;
-      font-size: em(48);
-      line-height: 50px;
-      margin-bottom: 25px;
-    }
+      h1 {
+        color: #fff;
+        font-size: rem-calc(48);
+        line-height: 50px;
+        margin-bottom: 25px;
+      }
 
-    h2{
-      color: darken($secondary-color, 5%);
-      font-size: em(24);
-      opacity: 0.85;
+      h2 {
+        color: darken($secondary-color, 5%);
+        font-size: rem-calc(24);
+        opacity: 0.85;
+      }
     }
   }
 }
