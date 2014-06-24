@@ -1,22 +1,25 @@
-.boxes{
-  @include span-columns(12);
+.boxes {
+  @include clearfix;
+  width: 100%;
   margin-top: 40px;
-  .box{
-    @include span-columns(4 of 12);
+  
+  .box {
+    @extend .large-4;
+    @extend .columns;
     text-align: center;
 
-    img{
+    img {
       margin-bottom: 30px;
     }
 
-    h2{
-      font-size: em(22);
+    h2 {
+      font-size: rem-calc(22);
       text-transform: uppercase;
       margin-bottom: 8px;
     }
 
-    p{
-      font-size: em(18);
+    p {
+      font-size: rem-calc(18);
     }
   }
 }

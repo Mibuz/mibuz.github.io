@@ -1,15 +1,12 @@
-@include media($mobile) {
+@media #{$small-only} {
   #contact{
     #form_contact{
-      @include span-columns(4);
-      @include shift(0);
 
       p{
         padding-top: 0px;
         line-height: 12px;
-        margin-bottom: em(12);
+        margin-bottom: rem-calc(12);
         &.medium{
-          @include span-columns(4 of 4);
         }
       }
       .unhappy{

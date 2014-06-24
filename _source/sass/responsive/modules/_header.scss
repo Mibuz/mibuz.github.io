@@ -1,48 +1,92 @@
-@include media($mobile) {
-  #header-hero{
+@media #{$small-only} {
+  #header-hero {
     background-size: inherit;
     background-position: 67% 0;
-    #navigation{
+    #navigation {
       .logo{
         float: none;
         text-align: center;
 
-        img{
+        img {
           width: 150px;
         }
       }
     }
-    .text-highlight{
-      width: 100%;
-      text-align: center;
-      margin-top: 160px;
-      h1{
-        letter-spacing: -3px;
-        margin-bottom: 25px;
-      }
-      h2{
-        color: #fff;
-        opacity: 0.65;
+    .hero-text {
+      .text-highlight {
+        width: 100%;
+        text-align: center;
+        margin-top: 160px;
+        h1 {
+          font-size: rem-calc(35);
+          line-height: rem-calc(35);
+          letter-spacing: -3px;
+          margin-bottom: 25px;
+        }
+        h2 {
+          font-size: rem-calc(22);
+          line-height: rem-calc(22);
+          color: #fff;
+          opacity: 0.65;
+        }
       }
     }
   }
 }
 
-@include media($mobile_small) {
-  #header-hero{
+@media #{$medium-only} {
+  #header-hero {
     background-size: inherit;
-    // background-position: -800px 0px;
+    background-position: 67% 0;
+    #navigation {
+      .logo{
+        float: none;
+        text-align: center;
 
-    .text-highlight{
-      h1{
-        font-size: em(35);
-        letter-spacing: -3px;
-        line-height: 35px;
+        img {
+          width: 150px;
+        }
       }
-
-      h2{
-        font-size: em(18);
+    }
+    .hero-text {
+      .text-highlight {
+        width: 100%;
+        text-align: center;
+        margin-top: 160px;
+        h1 {
+          font-size: rem-calc(42);
+          line-height: rem-calc(42);
+          letter-spacing: -3px;
+          margin-bottom: 25px;
+        }
+        h2 {
+          font-size: rem-calc(22);
+          line-height: rem-calc(22);
+          color: #fff;
+          opacity: 0.65;
+        }
       }
     }
   }
 }
+// @media #{$medium-only} {
+//   #header-hero {
+//     background-color: red;
+//     background-size: inherit;
+//
+//     .hero-text {
+//       .text-highlight {
+//         h1 {
+//           font-size: rem-calc(28);
+//           line-height: rem-calc(28);
+//           letter-spacing: -3px;
+//           line-height: 35px;
+//         }
+//
+//         h2 {
+//           font-size: rem-calc(18);
+//         }
+//       }
+//     }
+//   }
+// }

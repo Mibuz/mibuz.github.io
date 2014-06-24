@@ -1,9 +1,6 @@
-@include media($mobile) {
+@media #{$small-only} {
   .boxes{
-    @include span-columns(4);
-    margin-top: 20px;
     .box{
-      @include span-columns(4 of 4);
       margin-bottom: 40px;
 
       &:last-child{

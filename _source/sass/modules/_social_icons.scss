@@ -1,10 +1,13 @@
-ul.social-icons{
+ul.social-icons {
   display: block;
   overflow: auto;
   width:100%;
-  li{
+  margin-bottom: 0;
+  margin-left: 0;
+
+  li {
     display: inline-block;
-    a{
+    a {
       color: #fff;
       font-size: 24px;
       height:48px;

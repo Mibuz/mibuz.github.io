@@ -1,15 +1,19 @@
 @charset "utf-8";
 
-@import "compass/reset";
-@import "bourbon";
-@import "neat";
-@import "vendor/bitters/bitters";
-@import "setting";
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-// Helpers
+@import "setting";
+@import
+  "../../bower_components/foundation/scss/foundation",
+  "../../bower_components/bower-bourbon/bourbon";
+
+// // Helpers
 @import "helpers/buttons";
 @import "helpers/match";
 @import "helpers/font-icon";
+
+
+@include font-face(icon, 'font/fontello');
 
 // Core
 @import "core/main";

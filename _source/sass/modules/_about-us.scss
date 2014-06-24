@@ -1,9 +1,9 @@
-#about-us{
-  .content{
+#about-us {
+  .content {
     margin: 0 auto;
     max-width: 480px;
-    p{
-      font-size: em(18);
+    p {
+      font-size: rem-calc(18);
     }
   }
 }

@@ -1,28 +1,28 @@
-.block{
+.block {
   margin-top: 25px;
   margin-bottom: 25px;
   padding: 40px 0;
   text-align: center;
 
-  .text-highlight{
+  .text-highlight {
     text-align: center;
     max-width: 480px;
     margin: 0 auto 20px auto;
 
-    h1{
-      font-size: em(38);
+    h1 {
+      font-size: rem-calc(38);
       letter-spacing: -3px;
     }
 
-    h2{
+    h2 {
       margin-top: 10px;
-      font-size: em(18);
+      font-size: rem-calc(18);
       color: $main-color;
 
-      a{
+      a {
         color: darken($main-color, 20%);
 
-        &:hover{
+        &:hover {
           color: lighten($main-color, 8%);
         }
       }
