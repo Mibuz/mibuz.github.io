@@ -63,11 +63,11 @@ module.exports = (grunt) ->
         tasks: ['imagemin']
       sass:
         files: ['_source/sass/{,**/}*.scss']
-        tasks: ['sass']
+        tasks: ['sass', 'cssmin']
 
       coffee:
-        files: ['_source/coffee/modules{,**/}*.coffee']
-        tasks: ['coffee']
+        files: ['_source/coffee/{,**/}*.coffee']
+        tasks: ['coffee', 'uglify']
 
     grunt.registerTask 'default', [
       'sass'
