@@ -2,10 +2,10 @@
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-@import "setting";
 @import
   "../../bower_components/foundation/scss/foundation",
   "../../bower_components/bower-bourbon/bourbon";
+@import "setting";
 
 // // Helpers
 @import "helpers/buttons";

@@ -7,17 +7,25 @@ Site da Mibuz
 $ git clone git@github.com:mibuz/mibuz.github.com.git
 ```
 
-##Editing CSS
-Must install [Bower](/http://bower.io/).
+##Installing Node and Bower
+
+**Node**
+
+The Node to download from [http://nodejs.org/download/](http://nodejs.org/download/)
+
+**Bower**
+```sh
+$ npm i -g bower
+```
+[Bower](http://bower.io/)
+
+##Install components
 
 ```sh
-$ sudo npm install -g bower
-$ bower i
+$ npm i && bower i
 ```
-To install a component.
-```sh
-$ bower i _component-name_ -D
-```
+
+##Editing CSS
 
 You can edit the files in SASS folder `_source/sass`.
 
