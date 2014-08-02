@@ -1,10 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
   {% include head.html %}
-  <body>
-    {% include header.html %}
+<body>
+
+  <header id="main-header">
+    <div class="row">
+      <nav>
+        <a href="" class="logo">
+          <img src="{{site.assets_img}}/logo.svg" alt="">
+        </a>
+
+        <input type="checkbox" id="navicon" class="navicon-input">
+        <label for="navicon" class="navicon-lbl">
+          <i></i>
+        </label>
+
+        <div class="menu">
+          <ul>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Como fazemos</a></li>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
     {{ content }}
-    {% include footer.html %}
-    {% include scripts.html %}
-  </body>
+  </main>
+
+
+  <footer>
+    <div class="row">
+      <div class="copy">
+        <p>© 2014 Mibuz<br>contato@mibuz.com.br</p>
+        <ul class="social-design">
+          <li><a href="#" class="fa fa-behance"><span>Mibuz</span></a></li>
+          <li><a href="#" class="fa fa-dribbble"><span>Mibuz</span></a></li>
+          <li><a href="#" class="fa fa-github"><span>@Mibuz</span></a></li>
+          <li><a href="#" class="fa fa-twitter"><span>@mibuz_oficial</span></a></li>
+          <li><a href="#" class="fa fa-facebook-square"><span>@mibuz</span></a></li>
+        </ul>
+      </div>
+      <div class="by">
+        <a href="#" class="logo footer">
+          <img src="{{site.assets_img}}/logo.svg" alt="Logo Mibuz">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  {% include footer_scripts.html %}
+</body>
 </html>
