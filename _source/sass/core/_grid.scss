@@ -1,0 +1,19 @@
+.fullWidth {
+  @include grid-row();
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+.row {
+  @media #{$medium-only} {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: rem-calc(991)) {
+    padding: 0 20px;
+  }
+  @media #{$small-only} {
+    padding: 0 20px;
+  }
+
+}

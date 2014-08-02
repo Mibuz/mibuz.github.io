@@ -1,10 +1,11 @@
 #contact {
   @include box-sizing(border-box);
   padding: 80px 0;
-  background-image: url('../images/background-contact.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-image: url('http://mibuz.com.br/assets/images/background-contact.jpg');
+  background-position: 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   margin-bottom: 0;
 
@@ -12,10 +13,22 @@
     @extend .large-10;
     @extend .large-offset-1;
     @extend .columns;
-    // @extend .row;
+    margin-top: ($line*2);
 
     .hide {
       display: none;
+    }
+
+    .btTxt {
+      @extend .button;
+
+      background-color: $main-color;
+      display: block;
+      margin: 0 auto;
+
+      &:hover, &:focus {
+        background-color: darken($main-color, 8%);
+      }
     }
 
     p{

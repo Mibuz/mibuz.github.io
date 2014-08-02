@@ -1,0 +1,140 @@
+.section-content {
+  padding: ($line * 4) 0;
+
+  h1.title-section {
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: rem-calc(36);
+    margin: 0;
+    padding: 0;
+
+    strong {
+      font-weight: 700;
+    }
+    span {
+      display: block;
+      text-transform: none;
+      font-size: rem-calc(24);
+      color: rgba($m-black, 0.75);
+    }
+  }
+
+  .content {
+    text-align: center;
+    width: 60%;
+    margin: $line auto;
+
+    p {
+      font-size: rem-calc(18);
+    }
+  }
+
+  .boxs {
+    margin-top: ($line * 2);
+
+    &.center {
+      text-align: center;
+      .box {
+        width: 33%;
+        padding: 0 5px;
+        float: none;
+        display: inline-table;
+        margin-bottom: $line;
+
+
+
+        @media #{$large-only} {
+          &:nth-child(3n) {
+            padding: 0;
+          }
+
+          &:last-child {
+            padding: 0;
+          }
+        }
+
+        @media #{$small-only} {
+          width: 100%;
+          padding: 0;
+        }
+
+        @media #{$medium-only} {
+          width: 40%;
+          &:nth-child(2n) {
+            padding: 0;
+          }
+
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .box {
+      @extend .large-4;
+      @extend .medium-4;
+      @extend .small-12;
+      @extend .columns;
+      text-align: center;
+
+      [class*="icon-"] {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        min-height: 80px;
+
+        i {
+          @include horizontal-aling;
+          position: absolute;
+
+          &.top {
+            font-size: rem-calc(30);
+            top: 5px;
+          }
+
+          &.base {
+            bottom: 5px;
+            font-size: rem-calc(40);
+          }
+
+          &[class*="heart"] {
+            top: 49px;
+            font-size: rem-calc(18);
+            color: #e33;
+            z-index: 1;
+          }
+        }
+      }
+
+      h2 {
+        font-size: rem-calc(24);
+        color: #4a4a4a;
+      }
+      p {
+        color: #4a4a4a;
+        opacity: 0.85;
+        font-size: rem-calc(18);
+        line-height: rem-calc(24);
+      }
+      a {
+        font-size: rem-calc(18);
+        color: $main-color;
+      }
+    }
+  }
+}
+
+#prominent-area {
+  background-color: $main-color;
+  text-align: center;
+
+  h1, h1 > span {
+    color: #fff;
+  }
+
+  .button {
+    margin-top: $line;
+  }
+}

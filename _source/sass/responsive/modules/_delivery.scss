@@ -1,0 +1,15 @@
+@media #{$small-only} {
+  #delivery {
+    header {
+
+      h1 {
+        font-size: rem-calc(40);
+        line-height: rem-calc(40);
+        span {
+          font-size: rem-calc(22);
+          line-height: rem-calc(22);
+        }
+      }
+    }
+  }
+}
