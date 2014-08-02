@@ -38,6 +38,7 @@ module.exports = (grunt) ->
         files:
           'assets/stylesheets/style.css': 'assets/stylesheets/style.css'
 
+    # Images min
     imagemin:
       dist:
         files: [
@@ -46,7 +47,7 @@ module.exports = (grunt) ->
           src: ['**/*.{png,jpg,gif}']
           dest: 'assets/images/'
         ]
-
+    # SVG min
     svgmin:
       dist:
         files: [
