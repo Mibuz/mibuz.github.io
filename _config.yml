@@ -1,7 +1,8 @@
 name: Mibuz
-markdown: redcarpet
+markdown: kramdown
 assets_css: /assets/stylesheets/style.css
-assets_js: /assets/stylesheets/main.js
+assets_js: /assets/javascripts/app.js
+assets_img: /assets/images
 pygments: true
 permalink: pretty
 exclude:
