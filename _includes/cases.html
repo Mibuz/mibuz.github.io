@@ -1,0 +1,57 @@
+<section id="cases">
+  <div class="row">
+    <h1 class="title-section">Nossos Cases<span>
+        <ul class="social-design">
+          <li><a href="#" class="fa fa-behance"><span>Mibuz</span></a></li>
+          <li><a href="#" class="fa fa-dribbble"><span>Mibuz</span></a></li>
+        </ul></span></h1>
+  </div>
+  <div class="fullWidth">
+    <div class="grid-case">
+
+      {% for case in site.data.mvp.projects%}
+        <figure id="{{ case.slug }}" class="case">
+          <img src="{{ site.assets_img}}/cases/{{ case.image }}" alt="">
+          <figcaption>
+            <span class="type-case">
+              {{ case.tags }}
+            </span>
+
+            <h2>{{ case.name }}</h2>
+            <p>{{ case.description }}</p>
+
+            {% if case.social %}
+              <ul class="social-design">
+                {{% if social.url %}}
+                  <li>
+                    <a href="{{social.url}}" class="fa fa-eye"></a>
+                  </li>
+                {{% endif %}}
+
+                {{% if social.be %}}
+                  <li>
+                    <a href="{{social.be}}" class="fa fa-behance"></a>
+                  </li>
+                {{% endif %}}
+
+                {{% if social.dribbble %}}
+                  <li>
+                    <a href="{{social.dribbble}}" class="fa fa-dribbble"></a>
+                  </li>
+                {{% endif %}}
+              </ul>
+            {% endif %}
+          </figcaption>
+        </figure>
+      {% endfor %}
+
+      <figure class="like">
+        <img src="{{site.assets_img}}/box-like.jpg" alt="">
+        <figcaption>
+          <h2>Gostou do nossos trabalho?</h2>
+          <p>Fale conosco, teremos o prazer em ouvi-lo :)</p><a href="#" class="permalink">View more</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
