@@ -40,6 +40,8 @@
         h2 {;
           float: left;
           font-size: rem-calc(22);
+          width: 65%;
+          text-align: left;
         }
 
         p {
@@ -165,12 +167,18 @@
         a {
           color: #fff !important;
           background-color: transparent !important;
-          padding: 0;
+          padding: 1px;
 
           &::before {
             color: #fff !important;
             background-color: transparent !important;
             padding: 0;
+          }
+
+          &:hover {
+            &::before {
+              margin-right: 0px;
+            }
           }
         }
       }
