@@ -72,6 +72,7 @@
 
   #header-hero {
     padding: ($line * 3) 0;
+    background-position: 50% 50%;
     .text-hero {
       h1 {
         font-size: rem-calc(35);
@@ -178,6 +179,7 @@
 
   #header-hero {
     padding: ($line * 4) 0;
+    background-position: 50% 50%;
     .text-hero {
       h1 {
         font-size: rem-calc(45);
