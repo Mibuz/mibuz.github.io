@@ -9,7 +9,7 @@
   <div class="fullWidth">
     <div class="grid-case">
 
-      {% for case in site.data.mvp.projects%}
+      {% for case in site.data.mvp.projects %}
         <figure id="{{ case.slug }}" class="case">
           <img src="{{ site.assets_img}}/cases/{{ case.image }}" alt="">
           <figcaption>
@@ -20,25 +20,14 @@
             <h2>{{ case.name }}</h2>
             <p>{{ case.description }}</p>
 
-            {% if case.social %}
+            {% if case.links %}
               <ul class="social-design">
-                {{% if social.url %}}
-                  <li>
-                    <a href="{{social.url}}" class="fa fa-eye"></a>
-                  </li>
-                {{% endif %}}
 
-                {{% if social.be %}}
+                {% for ca in case.links %}
                   <li>
-                    <a href="{{social.be}}" class="fa fa-behance"></a>
+                    <a href="http://{{ca.url}}" class="fa fa-{{ca.provider}}"></a>
                   </li>
-                {{% endif %}}
-
-                {{% if social.dribbble %}}
-                  <li>
-                    <a href="{{social.dribbble}}" class="fa fa-dribbble"></a>
-                  </li>
-                {{% endif %}}
+                {% endfor %}
               </ul>
             {% endif %}
           </figcaption>
@@ -49,7 +38,8 @@
         <img src="{{site.assets_img}}/box-like.jpg" alt="">
         <figcaption>
           <h2>Gostou do nossos trabalho?</h2>
-          <p>Fale conosco, teremos o prazer em ouvi-lo :)</p><a href="#" class="permalink">View more</a>
+          <p>Fale conosco, teremos o prazer em ouvi-lo :)</p>
+          <a href="#" class="permalink">View more</a>
         </figcaption>
       </figure>
     </div>
