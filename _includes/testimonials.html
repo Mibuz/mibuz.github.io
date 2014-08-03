@@ -2,14 +2,17 @@
   <div class="row">
     <ul class="testimony">
 
-      <li>
-        <blockquote>
-          <div class="author"><img src="https://d13yacurqjgara.cloudfront.net/users/101659/avatars/original/_10U7739.jpg?1328980813" alt="José da Silva" class="avatar"/>
-            <h2>José da Silva<span>Diretor – Top Cine (TO)</span></h2>
-          </div>
-          <p></p>
-        </blockquote>
-      </li>
+      {% for testimony in site.data.testimonials.testimonials %}
+        <li>
+          <blockquote>
+            <div class="author">
+              <img src="{{site.assets_img}}/testimonials/{{testimony.photo}}" alt="{{testimony.name}}" class="avatar"/>
+              <h2>{{testimony.name}}<span>{{testimony.business}}</span></h2>
+            </div>
+            <p>{{testimony.quote}}</p>
+          </blockquote>
+        </li>
+      {% endfor %}
 
     </ul>
   </div>
