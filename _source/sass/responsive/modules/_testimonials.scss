@@ -1,0 +1,13 @@
+@media #{$small-only} {
+  .featured-testimony {
+
+    p {
+      font-size: rem-calc(32);
+      line-height: rem-calc(35);
+    }
+
+    span.author {
+      font-size: rem-calc(18);
+    }
+  }
+}

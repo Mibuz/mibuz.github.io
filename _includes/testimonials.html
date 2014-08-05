@@ -1,0 +1,19 @@
+<section id="testimonials" class="section-content">
+  <div class="row">
+    <ul class="testimony">
+
+      {% for testimony in site.data.testimonials.testimonials %}
+        <li>
+          <blockquote>
+            <div class="author">
+              <img src="{{site.assets_img}}/testimonials/{{testimony.photo}}" alt="{{testimony.name}}" class="avatar"/>
+              <h2>{{testimony.name}}<span>{{testimony.business}}</span></h2>
+            </div>
+            <p>{{testimony.quote}}</p>
+          </blockquote>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</section>

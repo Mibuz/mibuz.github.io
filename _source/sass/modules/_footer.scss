@@ -1,27 +1,58 @@
-#footer {
-  @include box-sizing(border-box);
-  padding: 60px 0;
-  background-color: $secondary-color;
-  font-size: .9em;
-  .boxes {
-    margin-top: 0;
-    .box {
-      @extend .large-12;
-      @extend .columns;
+footer {
+  background-color: $m-black;
+  padding: $line 0;
+
+  .by {
+    float: right;
+    @media #{$small-only} {
+      width: 100%;
+      text-align: center;
+
+      .logo {
+        float: none;
+        display: inline-block;
+      }
+    }
+    @media #{$medium-only} {
+      width: 100%;
+      text-align: center;
+
+      .logo {
+        float: none;
+        display: inline-block;
+      }
     }
   }
-  .vcard {
-    margin: 0;
-    padding: 0;
-    border: none;
-    width: 100%;
+  .copy {
+    float: left;
     color: #fff;
-    text-align: center;
+
+    @media #{$small-only} {
+      width: 100%;
+      text-align: center;
+    }
+    @media #{$medium-only} {
+      width: 100%;
+      text-align: center;
+    }
+
+    & > * {
+      display: block;
+      margin-right: ($line*3);
+      color: #fff;
+      font-weight: 400;
+    }
+
+    .social-design, p {
+      margin: 0;
+    }
 
     p {
-      margin: 0;
-      padding: 0;
-      opacity: 0.5;
+      line-height: rem-calc(12);
+      font-size: rem-calc(12);
+    }
+    .social-design {
+      margin-top: 15px;
     }
   }
 }

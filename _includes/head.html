@@ -1,14 +1,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{site.name}} {% if page.title %} - {{ page.title }}{% endif %}</title>
+  <title>
+    {{site.name}}{% if page.title %} - {{ page.title }}{% endif %}
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
   <meta name="robots" content="index, follow" />
-
+  {% if page.keywords %}
+  <meta content="{{ page.keywords }}" name="keywords">
+  {% else %}
+  <meta content="mibuz, fazer um app, outsourcing, desenvolvimento ios, fazer app ios, desenvolvimento android, fazer app android, desenvolvimento web, sistemas, saas, cloud, programação, ruby, startup, startups, site, sites, landing page, aplicativos, software, sistemas, aplicações, aplicativos, rails, infra estrutura cloud, infraestrutura cloud" name="keywords" />
+  {% endif %}
   <meta name="description" content="{{ page.description }}" />
-  <meta name="keywords" content="{{ page.keywords }}" />
-
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="{{ site.assets_css }}">
-  {% include analytics.html %}
 </head>

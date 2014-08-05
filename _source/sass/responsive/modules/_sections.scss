@@ -1,0 +1,33 @@
+@media #{$small-only} {
+  .section-content {
+
+    .content {
+      width: 100%;
+    }
+
+    h1.title-section {
+      font-size: rem-calc(26);
+      line-height: rem-calc(29);
+
+      strong {
+        font-weight: 700;
+      }
+      span {
+        display: block;
+        text-transform: none;
+        font-size: rem-calc(24);
+        color: rgba($m-black, 0.75);
+      }
+    }
+
+    .boxs {
+      .box {
+        margin-bottom: ($line*2);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

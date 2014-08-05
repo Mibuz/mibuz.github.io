@@ -1,0 +1,77 @@
+[class*="navicon-"] {
+
+  @media #{$small-only} {
+    &[class*="lbl"] {
+      display: block !important;
+    }
+  }
+
+  @media #{$medium-only} {
+    &[class*="lbl"] {
+      display: block !important;
+    }
+  }
+
+  &[class*="lbl"] {
+    @include transition (all 0.3s ease-in-out);
+    border: 1px solid  #fff;
+    display: none;
+    margin: 11px 0 0 0 !important;
+    text-align: center;
+    width: $size-navicon;
+    height: $size-navicon;
+    position: relative;
+    float: right;
+    z-index: 3;
+
+    &::before , &::after, i {
+      @include transform(translate3d(0,0,0) translateX(50%));
+      @include transform-origin(center);
+      @include transition (all 0.3s ease-in-out);
+      content: "";
+      display: block;
+      height: ($size-navicon/15);
+      width: 71%;
+      top: 50%;
+      right: 50%;
+      background-color: #fff;
+      position: absolute;
+      border-radius: rem-calc(($size-navicon/2));
+    }
+
+    &::before {
+      top: ($size-navicon/6);
+    }
+
+    i {
+      @include center-aling;
+    }
+
+    &::after {
+      top: inherit;
+      bottom: ($size-navicon/6);
+    }
+  }
+
+  &[class*="input"] {
+    display: none;
+    &:checked {
+      & ~ .navicon-lbl {
+        border-radius: 100%;
+        &::before {
+          @include transform(translate3d(2px, 3px,0) rotate(40deg)  translateX(50%));
+          top: ($size-navicon/8);
+        }
+
+        i {
+          opacity: 0;
+        }
+
+        &::after {
+          @include transform(translate3d(2px,-2px,0) rotate(-40deg) translateX(50%));
+          bottom: ($size-navicon/8);
+        }
+      }
+    }
+  }
+}

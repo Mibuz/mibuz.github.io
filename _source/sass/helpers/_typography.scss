@@ -1,0 +1,8 @@
+$headtitles-list: 'h1','h2','h3','h4','h5','h6';
+
+$unquoted-headtitles-list: ();
+@each $headtitle in $headtitles-list {
+  $unquoted-headtitles-list: append($unquoted-headtitles-list, unquote($headtitle), comma);
+}
+
+$all-headtitles: $unquoted-headtitles-list;

@@ -1,0 +1,43 @@
+<section id="cases">
+  <div class="row">
+    <h1 class="title-section">Nossos Cases</h1>
+  </div>
+  <div class="fullWidth">
+    <div class="grid-case">
+
+      {% for case in site.data.mvp.projects %}
+        <figure id="{{ case.slug }}" class="case">
+          <img src="{{ site.assets_img}}/cases/{{ case.image }}" alt="">
+          <figcaption>
+            <span class="type-case">
+              {{ case.tags }}
+            </span>
+
+            <h2>{{ case.name }}</h2>
+            <p>{{ case.description }}</p>
+
+            <!-- {% if case.links %}
+              <ul class="social-design">
+
+                {% for ca in case.links %}
+                  <li>
+                    <a href="http://{{ca.url}}" target="_blank" class="fa fa-{{ca.provider}}"></a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %} -->
+          </figcaption>
+        </figure>
+      {% endfor %}
+
+      <figure class="like">
+        <img src="{{site.assets_img}}/box-like.jpg" alt="">
+        <figcaption>
+          <h2>Gostou?</h2>
+          <p>Que tal colocar seu projeto aqui? :)</p>
+          <a href="#contact" class="permalink scroll-to">View more</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

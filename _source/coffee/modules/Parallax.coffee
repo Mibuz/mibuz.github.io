@@ -3,30 +3,24 @@ class @Parallax extends @App
     @background()
 
   scrolling: (el, to, duration) ->
-    @mover = 8
-    duration = if duration < 0 || typeof duration != 'undefined' then duration else 800
-
-    difference = to - $(window).scrollTop()
-    perTick = difference / duration * @mover
-
-    setTimeout((->
-      unless isNaN(parseInt(perTick, @mover))
-        window.scrollTo 0, $(window).scrollTop() + perTick
-        @scrolling el, to, duration - @mover
-    ).bind(this), @mover)
+    duration: 500
+    $(el).animate
+      scrollTop: to
+    , duration
 
   background: ->
     if !@isMobile()
       $('[data-parallax-speed]').each ->
-        $obj = $(@);
+        $obj = $(@)
+        offset = parseInt($obj.css('background-position-y'))
 
         $(window).scroll ->
-          yPos = ($(window).scrollTop() / $obj.data('parallax-speed'))
+          yPos = ($(window).scrollTop() / $obj.data('parallax-speed')) + offset
           bgpos = "50% #{ yPos }px"
           $obj.css('background-position', bgpos )
 
 parallax = new Parallax()
 
-$('.scroll-to').on 'click', (e) ->
+$('.scroll-to, .menu ul li a').on 'click', (e) ->
   e.preventDefault()
-  parallax.scrolling $(window), $($(@).attr('href')).offset().top
+  parallax.scrolling 'body', $($(@).attr('href')).offset().top

@@ -1,41 +1,34 @@
-@charset "utf-8";
 @import
   "../../bower_components/foundation/scss/foundation",
   "../../bower_components/bower-bourbon/bourbon";
-@import "setting";
 
-// // Helpers
-@import "helpers/buttons";
-@import "helpers/match";
-@import "helpers/font-icon";
+@import
+  "settings";
 
+@import
+  "helpers/typography",
+  "helpers/align",
+  "helpers/grid";
 
-@include font-face(icon, 'font/fontello');
+@import
+  "core/core",
+  "core/animations",
+  "core/grid";
 
-// Core
-@import "core/main";
-@import "core/reset";
+@import
+  "modules/sections",
+  "modules/header",
+  "modules/delivery",
+  "modules/cases",
+  "modules/testimonials",
+  "modules/navicon",
+  "modules/form-contact",
+  "modules/form-sexx",
+  "modules/footer";
 
-// Components
-@import "components/buttons";
-
-// Modules
-@import "modules/header";
-@import "modules/cloud";
-@import "modules/boxes";
-@import "modules/blocks";
-@import "modules/about-us";
-@import "modules/contact";
-@import "modules/social_icons";
-@import "modules/support";
-@import "modules/footer";
-
-// Responsive
-@import "responsive/core/main";
-
-@import "responsive/modules/header";
-@import "responsive/modules/specialists";
-@import "responsive/modules/boxes";
-@import "responsive/modules/blocks";
-@import "responsive/modules/contact";
-@import "responsive/modules/support";
+@import
+  "responsive/modules/header",
+  "responsive/modules/delivery",
+  "responsive/modules/testimonials",
+  "responsive/modules/form-contact",
+  "responsive/modules/sections";
