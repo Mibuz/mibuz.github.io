@@ -48,27 +48,27 @@
     }
     p {
       margin-top: $line;
-      font-size: rem-calc(22);
+      font-size: rem-calc(19);
       line-height: rem-calc(22);
       font-weight: 200;
       font-style: italic;
       color: #73453c;
-      quotes: "\201C""\201D";
+      // quotes: "\201C""\201D";
 
       position: relative;
 
-      &:before {
-        position: absolute;
-        font-weight: 900;
-        color: #73453c;
-        content: open-quote;
-        font-size: rem-calc(60);
-        line-height: rem-calc(60);
-        margin-left: -0.25em;
-        vertical-align: rem-calc(24);
-        left: 0;
-        top: -10px;
-      }
+      // &:before {
+      //   position: absolute;
+      //   font-weight: 900;
+      //   color: #73453c;
+      //   content: open-quote;
+      //   font-size: rem-calc(60);
+      //   line-height: rem-calc(60);
+      //   margin-left: -0.25em;
+      //   vertical-align: rem-calc(24);
+      //   left: 0;
+      //   top: -10px;
+      // }
     }
   }
 }

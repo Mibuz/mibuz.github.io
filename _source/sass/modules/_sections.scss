@@ -9,6 +9,10 @@
     margin: 0;
     padding: 0;
 
+    abbr {
+      font-weight: 700;
+    }
+
     strong {
       font-weight: 700;
     }
@@ -31,6 +35,7 @@
   }
 
   .boxs {
+    @include clearfix;
     margin-top: ($line * 2);
 
     &.center {
@@ -122,6 +127,19 @@
         font-size: rem-calc(18);
         color: $main-color;
       }
+    }
+  }
+}
+#service {
+  text-align: center;
+
+  .btn-more {
+    @extend .button;
+    margin-top: $line;
+    background-color: $main-color;
+
+    &:hover, &:focus {
+      background-color: darken($main-color, 8%);
     }
   }
 }

@@ -11,7 +11,7 @@ projects:
     slug: superfan
     tags: Android
     image: superfan.png
-    description: A forma mais simples de ouvir as melhores músicas.
+    description: Aplicativo para rádio online.
   -
     name: TopCine
     links:
@@ -24,7 +24,7 @@ projects:
     slug: topcine-mobile
     tags: Android e iOs
     image: topcine-mobile.png
-    description: Veja os filmes do TopCine de Araguaína do seu celular.
+    description: Aplicativos mobile para cinema.
   -
     name: TopCine
     links:
@@ -37,7 +37,7 @@ projects:
     slug: topcine
     tags: Web
     image: topcine.png
-    description: Veja os filmes do TopCine de Araguaína.
+    description: Site para cinema.
   -
     name: Motor de ideias
     links:
@@ -51,3 +51,16 @@ projects:
     tags: Web
     image: motor.png
     description: Transformando ideias em negócios digitais.
+  -
+    name: RenSoftWare
+    links:
+    - provider: eye
+      url: rensoftware.com.br
+    - provider: behance
+      url:
+    - provider: dribbble
+      url:
+    slug: rensoftware
+    tags: Android e iOs
+    image: rensoftware.png
+    description: Aplicativo de notícias corporativas.

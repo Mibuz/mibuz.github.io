@@ -1,10 +1,6 @@
 <section id="cases">
   <div class="row">
-    <h1 class="title-section">Nossos Cases<span>
-        <ul class="social-design">
-          <li><a href="#" class="fa fa-behance"><span>Mibuz</span></a></li>
-          <li><a href="#" class="fa fa-dribbble"><span>Mibuz</span></a></li>
-        </ul></span></h1>
+    <h1 class="title-section">Nossos Cases</h1>
   </div>
   <div class="fullWidth">
     <div class="grid-case">
@@ -25,7 +21,7 @@
 
                 {% for ca in case.links %}
                   <li>
-                    <a href="http://{{ca.url}}" class="fa fa-{{ca.provider}}"></a>
+                    <a href="http://{{ca.url}}" target="_blank" class="fa fa-{{ca.provider}}"></a>
                   </li>
                 {% endfor %}
               </ul>
@@ -37,7 +33,7 @@
       <figure class="like">
         <img src="{{site.assets_img}}/box-like.jpg" alt="">
         <figcaption>
-          <h2>Gostou do nossos trabalho?</h2>
+          <h2>Gostou?</h2>
           <p>Fale conosco, teremos o prazer em ouvi-lo :)</p>
           <a href="#contact" class="permalink scroll-to">View more</a>
         </figcaption>
