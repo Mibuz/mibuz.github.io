@@ -1,22 +1,24 @@
 <section id="contact" class="section-content">
   <div class="row">
     <h1 class="title-section">Tem algum projeto?<span>Teremos o prazer em ouvi-lo :)</span></h1>
-    <form id="form_contact" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate="" action="https://mibuz.wufoo.com/forms/z16tv83n0qesjr0/#public">
+
+    <form accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate="" action="https://mibuz.com.br">
       <p class="medium">
-        <input id="Field1" type="text" name="Field1" value="" maxlength="255" tabindex="1" onkeyup="" placeholder="Nome" required="" class="field text medium"/>
+        <input type="text" name="data[name]" maxlength="255" tabindex="1" placeholder="Nome" class="field name text medium"/>
       </p>
       <p class="medium">
-        <input id="Field2" type="text" name="Field2" spellcheck="false" value="" maxlength="255" tabindex="2" placeholder="Email" required="" class="field text medium"/>
+        <input type="text" name="data[email]" spellcheck="false" maxlength="255" tabindex="2" placeholder="Email" class="field email text medium"/>
       </p>
       <p class="medium last">
-        <input id="Field4" type="text" name="Field4" value="" maxlength="255" tabindex="3" onkeyup="" placeholder="Skype ou telefone" required="" class="field text medium"/>
+        <input type="text" name="data[phone]" maxlength="255" tabindex="3" placeholder="Skype ou telefone" class="field phone text medium"/>
       </p>
       <p>
-        <textarea id="Field5" name="Field5" spellcheck="true" rows="10" cols="50" tabindex="4" onkeyup="" placeholder="Mensagem" required="" class="field textarea medium"></textarea>
+        <textarea name="data[message]" spellcheck="true" rows="10" cols="50" tabindex="4" onkeyup="" placeholder="Mensagem" required="" class="field message textarea medium"></textarea>
       </p>
       <p>
-        <input id="saveForm" type="submit" name="saveForm" value="Enviar mensagem" class="btTxt submit"/>
+        <input type="submit" name="saveForm" value="Enviar mensagem" tabindex="5" class="btTxt submit"/>
       </p>
+
       <div class="hide">
         <textarea id="comment" name="comment" rows="1" cols="1"></textarea>
         <input id="idstamp" type="hidden" name="idstamp" value="iRmGRbnsj+hhPf1YGwBRAl6neXal0AbFAVux1f0E+zw="/>
