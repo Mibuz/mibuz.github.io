@@ -39,6 +39,13 @@ $(".field.email").autoEmail(
   false
   )
 
+ajaxSuccess = (response) ->
+  message = "Mensagem enviada com sucesso!"
+  $("#contact .alert").removeClass('error').addClass('success').html(message)
+
+ajaxError = (xhr, ajaxOptions, thrownError) ->
+  message = "Algo errado aconteceu, vamos verificar. Enquanto isso, por favor, envie um email para contato@mibuz.com.br."
+  $("#contact .alert").removeClass('success').addClass('error').html(message)
 
 $("#contact form").on 'submit', (e)->
 
@@ -48,9 +55,9 @@ $("#contact form").on 'submit', (e)->
     data: $(@).serializeArray()
 
     success: (response) ->
-      console.log response
+      ajaxSuccess(response)
 
     error: (xhr, ajaxOptions, thrownError) ->
-      console.log xhr.responseText
+      ajaxError(xhr, ajaxOptions, thrownError)
 
   e.preventDefault()
