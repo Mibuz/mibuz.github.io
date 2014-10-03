@@ -16,7 +16,7 @@
             <h2>{{ case.name }}</h2>
             <p>{{ case.description }}</p>
 
-            <!-- {% if case.links %}
+            {% if case.links %}
               <ul class="social-design">
 
                 {% for ca in case.links %}
@@ -25,18 +25,18 @@
                   </li>
                 {% endfor %}
               </ul>
-            {% endif %} -->
+            {% endif %}
           </figcaption>
         </figure>
       {% endfor %}
 
-      <figure class="like">
+      <figure class="case like">
         <img src="{{site.assets_img}}/box-like.jpg" alt="">
         <figcaption>
           <h2>Gostou?</h2>
           <p>Que tal colocar seu projeto aqui? :)</p>
-          <a href="#contact" class="permalink scroll-to">View more</a>
         </figcaption>
+        <a href="#contact" class="permalink scroll-to">Contato</a>
       </figure>
     </div>
   </div>
