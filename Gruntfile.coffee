@@ -59,9 +59,6 @@ module.exports = (grunt) ->
 
     # Watch
     watch:
-      images:
-        files: ['assets/images/{**/*}.{png,jpg,gif,svg}']
-        tasks: ['imagemin']
       sass:
         files: ['_source/sass/{,**/}*.scss']
         tasks: ['sass', 'cssmin']
@@ -75,7 +72,5 @@ module.exports = (grunt) ->
       'coffee'
       'cssmin'
       'uglify'
-      'imagemin'
-      'svgmin'
       'watch'
     ]
