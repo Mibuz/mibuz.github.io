@@ -1,65 +1,45 @@
 projects:
+  # Modelo
+  # -
+  #   name: Nome do Projeto
+  #   links:
+  #   - provider: eye
+  #     url: www.linkdoprojeto.com.br
+  #   - provider: behance
+  #     url: www.behancelinkdoprojeto.com.br
+  #   - provider: dribbble
+  #     url: www.dribbblelinkdoprojeto.com.br
+  #   slug: slugprojeto
+  #   tags: Tags
+  #   image: images.png
+  #   description: Descrição.
+
   -
     name: Rádio SuperFan
-    links:
-    - provider: eye
-      url:
-    - provider: behance
-      url:
-    - provider: dribbble
-      url:
     slug: superfan
     tags: Android
     image: superfan.png
     description: Aplicativo para rádio online.
   -
     name: TopCine
-    links:
-    - provider: eye
-      url: topcinearaguaina.com.br
-    - provider: behance
-      url:
-    - provider: dribbble
-      url:
     slug: topcine-mobile
     tags: Android e iOs
     image: topcine-mobile.png
     description: Aplicativos mobile para cinema.
   -
     name: TopCine
-    links:
-    - provider: eye
-      url: topcinearaguaina.com.br
-    - provider: behance
-      url:
-    - provider: dribbble
-      url:
     slug: topcine
     tags: Web
     image: topcine.png
     description: Site para cinema.
   -
     name: Motor de ideias
-    links:
-    - provider: eye
-      url: motordeideias.com.br
-    - provider: behance
-      url:
-    - provider: dribbble
-      url:
     slug: motor
     tags: Web
     image: motor.png
     description: Transformando ideias em negócios digitais.
   -
     name: RenSoftWare
-    links:
-    - provider: eye
-      url: rensoftware.com.br
-    - provider: behance
-      url:
-    - provider: dribbble
-      url:
     slug: rensoftware
     tags: Android e iOs
     image: rensoftware.png
